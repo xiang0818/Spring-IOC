@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="IntrduceDemo" class="com.empty.domain.IntrduceDemo">
+        <property name="name" value="李佳奇"/>
+        <property name="age" value="2"/>
+        <property name="body" ref="body"/>
+    </bean>
+    <bean id="body" class="com.empty.domain.body">
+        <property name="hand" value="我的受"/>
+        <property name="sex" value="男"/>
+    </bean>
+    <bean id="interfaces" class="com.spring.implinterface.ServiceLocator">
+    </bean>
+    <bean id="impl" class="com.spring.implinterface.SerivcesImpl">
+    </bean>
+
+    <bean id="ExampleBean" class="com.empty.domain.ExampleBean">
+        <constructor-arg name="years" value="1"></constructor-arg>
+        <constructor-arg name="ultimateAnswer" value="0210"></constructor-arg>
+    </bean>
+</beans>
